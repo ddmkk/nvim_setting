@@ -1,0 +1,45 @@
+# コード非同期チェック
+[[plugins]]
+repo = 'w0rp/ale'
+
+# Deoplete コード補完
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+  source ~/.config/nvim/plugins/deoplete.rc.vim
+'''
+on_event = 'InsertEnter'
+
+[[plugins]]
+repo = 'Shougo/neco-syntax'
+on_event = 'InsertEnter'
+
+[[plugins]]
+repo = 'Shougo/neosnippet'
+hook_add = '''
+  imap <C-k> <Plug>(neosnippet_expand_or_jump)
+  smap <C-k> <Plug>(neosnippet_expand_or_jump)
+  xmap <C-k> <Plug>(neosnippet_expand_target)
+  if has('conceal')
+    set conceallevel=0 concealcursor=niv
+  endif
+'''
+on_event = 'InsertEnter'
+depends = ['neosnippet-snippets']
+
+[[plugins]]
+repo= 'Shougo/neosnippet-snippets'
+
+# Emmet
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_i = 1
+hook_add = '''
+let g:user_emmet_leader_key='<C-e>'
+let g:user_emmet_settings = {
+\   'variables': {
+\       'lang': "ja"
+\   }
+\ }
+'''
+
