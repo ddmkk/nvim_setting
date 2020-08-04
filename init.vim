@@ -1,7 +1,7 @@
 " deinの読み込み前に指定
 let mapleader = "\<Space>"
 
-let g:python_host_prog='C:\Python27/python.exe'
+" let g:python_host_prog='C:\Python27/python.exe'
 let g:python3_host_prog='C:\Python38/python.exe'
 
 " dein.vim
@@ -28,14 +28,14 @@ set hidden
 "ファイル内容が変更されると自動読み込みする
 set autoread
 "バックアップディレクトリを指定する
-set backupdir=$HOME/.vim/backup
+set backupdir=$HOME/.config/nvim/backup
 "ファイル保存ダイアログの初期ディレクトリをバッファファイル位置に設定
 set browsedir=buffer
 "スワップファイルディレクトリを指定する
-set directory=$HOME/.vim/backup,c:\temp
+set directory=$HOME/.config/nvim/backup
 "履歴保存数
 set history=1000
-set undodir=$HOME/.vim/undo
+set undodir=$HOME/.config/nvim/undo
 "インクリメンタルサーチを行う
 set incsearch
 "検索結果をハイライトする
@@ -76,14 +76,12 @@ set modifiable
 set write
 " ステータスラインを常に表示
 set laststatus=2
-" 編集中のファイルのディレクトリに自動的にカレントディレクトリを切り替えない
+" 編集中のファイルのディレクトリに自動的にカレントディレクトリを切り替える
 set autochdir
 "カーソル行の背景色を変更
 set cursorline
 " 長すぎるシンタックスのカラーリングOFF
 " set synmaxcol=200
-
-
 " 勝手に折りたたまれないようにする
 " set foldmethod=syntax
 set foldmethod=manual
@@ -181,5 +179,6 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.yml setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.md setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.toml setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 

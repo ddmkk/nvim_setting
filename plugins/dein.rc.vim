@@ -18,7 +18,6 @@ if dein#load_state('~/.cache/dein')
   call dein#save_state()
 endif
 
-" XXX checkが遅いのでコメントアウト
 if dein#check_install()
   call dein#install()
 endif
