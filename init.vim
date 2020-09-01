@@ -46,7 +46,8 @@ set ignorecase
 set smartcase
 "検索をファイルの先頭へループする
 set wrapscan
-set autoindent
+" set autoindent
+set smartindent
 "行頭での<Tab>の幅
 set shiftwidth=4
 "行頭以外での<Tab>の幅
@@ -82,6 +83,8 @@ set autochdir
 set cursorline
 " 長すぎるシンタックスのカラーリングOFF
 " set synmaxcol=200
+
+" 折り畳み設定
 " 勝手に折りたたまれないようにする
 " set foldmethod=syntax
 set foldmethod=manual

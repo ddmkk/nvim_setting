@@ -58,7 +58,8 @@ source ~/.config/nvim/plugins/defx.rc.vim
 # -----------------------------------------------------
 
 [[plugins]] # コメント
-repo = 'tpope/vim-commentary'
+# repo = 'tpope/vim-commentary'
+repo = 'tomtom/tcomment_vim'
 
 [[plugins]] # インデントに色を付けて見やすくする
 repo = 'nathanaelkane/vim-indent-guides'

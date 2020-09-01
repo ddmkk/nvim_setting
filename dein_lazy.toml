@@ -1,6 +1,11 @@
 # コード非同期チェック
 [[plugins]]
-repo = 'w0rp/ale'
+repo = 'dense-analysis/ale'
+hook_source = '''
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '!!'
+let g:ale_sign_warning = '=='
+'''
 
 # --------------------------------------
 # Deoplete コード補完
@@ -82,17 +87,23 @@ on_ft= ['javascript', 'javascript.jsx']
 
 [[plugins]]
 repo = 'elzr/vim-json'
+on_ft= ['json']
 hook_add = '''
 " ダブルクオテーション省略機能無効化
 let g:vim_json_syntax_conceal = 0
 '''
 
+# [[plugins]]
+# repo = 'leafgarland/typescript-vim'
+# on_ft= ['typescript', 'typescript.tsx']
+
 [[plugins]]
-repo = 'leafgarland/typescript-vim'
+repo = 'peitalin/vim-jsx-typescript'
 on_ft= ['typescript', 'typescript.tsx']
 
 [[plugins]] # TOMLシンタックス
 repo = 'cespare/vim-toml'
+on_ft= ['toml']
 
 [[plugins]] # HTML5
 repo = 'othree/html5.vim'
@@ -111,12 +122,12 @@ repo = 'vim-scripts/smarty-syntax'
 
 [[plugins]] # twig
 repo = 'beyondwords/vim-twig'
+on_ft= ['twig', 'html.twig']
 
 [[plugins]] # pug
 repo = 'digitaltoad/vim-pug'
+on_ft= ['pug']
 
 [[plugins]] # vue
 repo = 'posva/vim-vue'
-
-
 
