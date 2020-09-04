@@ -39,6 +39,13 @@ depends = ['neosnippet-snippets']
 repo= 'Shougo/neosnippet-snippets'
 
 # --------------------------------------
+# 全角・半角切替
+# --------------------------------------
+
+[[plugins]]
+repo = 'yuta-masano/hz_ja.vim'
+
+# --------------------------------------
 # Emmet
 # --------------------------------------
 [[plugins]]
