@@ -89,6 +89,19 @@ endfunction
 
 nnoremap <silent><Leader>fe :<C-u>Defx -show-ignored-files -toggle -resume<CR>
 
+" vimの外でファイルを変更した場合も反映させる
 autocmd BufWritePost * call defx#redraw()
 autocmd BufEnter * call defx#redraw()
+
+" 複数プロジェクトの選択を簡単にする
+let s:menus = {}
+let s:menus.projects = { 'description': 'switch projects' }
+let s:menus.projects.command_candidates = [
+    \   ['umicon', 'Defx ~/docker-umicon/html/'],
+    \   ['nie', 'Defx ~/docker-nie/wp-cotnent/themes/'],
+    \   ['denshiban', 'Defx ~/work/denshiban/'],
+    \ ]
+call denite#custom#var('menu', 'menus', s:menus)
+
+nnoremap <silent> <Leader>p :<C-u>Denite menu:projects<CR>
 

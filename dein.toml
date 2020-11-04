@@ -83,7 +83,7 @@ repo = 'junegunn/vim-easy-align'
 [[plugins]] # 任意の２か所のdiffをマークする
 repo = 'AndrewRadev/linediff.vim'
 
-[[plugins]] 
+[[plugins]]
 repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
@@ -105,7 +105,7 @@ source ~/.config/nvim/plugins/vim-airline.rc.vim
 [[plugins]] # vim用gitラッパープラグイン
 repo ='tpope/vim-fugitive'
 
-# [[plugins]] # git の変更箇所を左側にマーク
+[[plugins]] # git の変更箇所を左側にマーク
 repo = 'airblade/vim-gitgutter'
 
 # -----------------------------------------

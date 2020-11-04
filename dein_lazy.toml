@@ -13,10 +13,13 @@ let g:ale_sign_warning = '=='
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
-hook_add = '''
+depends = ['context_filetype.vim']
+on_i = 1
+on_event = 'InsertCharPre'
+if = "has('nvim')"
+hook_source = '''
 source ~/.config/nvim/plugins/deoplete.rc.vim
 '''
-on_event = 'InsertEnter'
 
 [[plugins]]
 repo = 'Shougo/neco-syntax'
@@ -48,6 +51,7 @@ repo = 'yuta-masano/hz_ja.vim'
 # --------------------------------------
 # Emmet
 # --------------------------------------
+
 [[plugins]]
 repo = 'mattn/emmet-vim'
 on_i = 1
@@ -66,13 +70,14 @@ let g:user_emmet_settings = {
 # --------------------------------------
 # カーソル位置のコンテキストのfiletypeを判定しシンタックスを切り替える
 # --------------------------------------
+
 [[plugins]]  
 repo = 'Shougo/context_filetype.vim'
 
 [[plugins]] 
 repo = 'osyo-manga/vim-precious'
 depends = ['context_filetype.vim']
-hook_add = '''
+hook_source = '''
 source ~/.config/nvim/plugins/vim-precious.rc.vim
 '''
 
@@ -88,9 +93,9 @@ on_ft= ['javascript', 'javascript.jsx']
 repo = 'maxmellon/vim-jsx-pretty'
 on_ft= ['javascript', 'javascript.jsx']
 
-[[plugins]]
-repo = 'alampros/vim-styled-jsx'
-on_ft= ['javascript', 'javascript.jsx']
+# [[plugins]]
+# repo = 'alampros/vim-styled-jsx'
+# on_ft= ['javascript', 'javascript.jsx']
 
 [[plugins]]
 repo = 'elzr/vim-json'
@@ -138,3 +143,6 @@ on_ft= ['pug']
 [[plugins]] # vue
 repo = 'posva/vim-vue'
 
+[[plugins]] # nunjucks
+repo = 'lepture/vim-jinja'
+on_ft= ['jinja', 'njk']

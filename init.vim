@@ -1,8 +1,8 @@
 " deinの読み込み前に指定
 let mapleader = "\<Space>"
 
-" let g:python_host_prog='C:\Python27/python.exe'
-let g:python3_host_prog='C:\Python38/python.exe'
+let g:python_host_prog='C:\Python27/python.exe'
+let g:python3_host_prog='C:\Python39/python.exe'
 
 " dein.vim
 runtime! plugins/dein.rc.vim
@@ -89,6 +89,9 @@ set cursorline
 " set foldmethod=syntax
 set foldmethod=manual
 set foldlevel=100
+
+" 全角記号の見た目修正
+" set ambiwidth=double
 
 " -----------------------------------------
 " キーマッピング
