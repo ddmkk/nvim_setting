@@ -188,3 +188,13 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.toml setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
+" set autoreadが効かないの以下で対応
+if ! exists("g:CheckUpdateStarter")
+  let g:CheckUpdateStarter=1
+  call timer_start(1, 'CheckUpdate')
+endif
+function! CheckUpdate(timer)
+  silent! checktime
+  call timer_start(1000, 'CheckUpdate')
+endfunction
+
