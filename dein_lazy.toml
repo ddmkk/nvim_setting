@@ -146,3 +146,8 @@ repo = 'posva/vim-vue'
 [[plugins]] # nunjucks
 repo = 'lepture/vim-jinja'
 on_ft= ['jinja', 'njk']
+
+[[plugins]] # stylus
+repo = 'wavded/vim-stylus'
+on_ft= ['stylus']
+

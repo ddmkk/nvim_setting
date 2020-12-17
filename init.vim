@@ -75,12 +75,19 @@ set list
 set listchars=tab:>\ ,trail:_,eol:$
 set modifiable
 set write
+
 " ステータスラインを常に表示
 set laststatus=2
-" 編集中のファイルのディレクトリに自動的にカレントディレクトリを切り替える
-set autochdir
+
+" ステータスラインに常にカレントディレクトリを表示する
+set statusline=%!getcwd()
+
+" 編集中のファイルのディレクトリに自動的にカレントディレクトリを切り替える @XXX 逆に使いづらいのでやめた
+" set autochdir
+
 "カーソル行の背景色を変更
 set cursorline
+
 " 長すぎるシンタックスのカラーリングOFF
 " set synmaxcol=200
 
@@ -90,7 +97,7 @@ set cursorline
 set foldmethod=manual
 set foldlevel=100
 
-" 全角記号の見た目修正
+" 全角記号の見た目修正 @XXX NeoVim-qtでは意図通りの動きをしなかった
 " set ambiwidth=double
 
 " -----------------------------------------
