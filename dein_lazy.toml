@@ -14,18 +14,19 @@ let g:ale_sign_warning = '=='
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 depends = ['context_filetype.vim']
-on_i = 1
-on_event = 'InsertCharPre'
+# on_i = 1
+# on_event = 'InsertCharPre'
 if = "has('nvim')"
 hook_source = '''
 source ~/.config/nvim/plugins/deoplete.rc.vim
 '''
+on_event = 'InsertEnter'
 
-[[plugins]]
+[[plugins]] # シンタックスファイルを使用して補完を行う
 repo = 'Shougo/neco-syntax'
 on_event = 'InsertEnter'
 
-[[plugins]]
+[[plugins]] # 定型構文（スニペット）を補完する
 repo = 'Shougo/neosnippet'
 hook_add = '''
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
@@ -38,7 +39,7 @@ endif
 on_event = 'InsertEnter'
 depends = ['neosnippet-snippets']
 
-[[plugins]]
+[[plugins]] # スニペットライブラリ
 repo= 'Shougo/neosnippet-snippets'
 
 # --------------------------------------
@@ -151,3 +152,6 @@ on_ft= ['jinja', 'njk']
 repo = 'wavded/vim-stylus'
 on_ft= ['stylus']
 
+[[plugins]] #php
+repo = 'stanangeloff/php.vim'
+on_ft = ['php']

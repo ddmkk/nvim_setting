@@ -82,14 +82,14 @@ set laststatus=2
 " ステータスラインに常にカレントディレクトリを表示する
 set statusline=%!getcwd()
 
-" 編集中のファイルのディレクトリに自動的にカレントディレクトリを切り替える @XXX 逆に使いづらいのでやめた
+" 編集中のファイルのディレクトリに自動的にカレントディレクトリを切り替える
 " set autochdir
 
 "カーソル行の背景色を変更
 set cursorline
 
 " 長すぎるシンタックスのカラーリングOFF
-" set synmaxcol=200
+set synmaxcol=200
 
 " 折り畳み設定
 " 勝手に折りたたまれないようにする
@@ -98,7 +98,7 @@ set foldmethod=manual
 set foldlevel=100
 
 " 全角記号の見た目修正 @XXX NeoVim-qtでは意図通りの動きをしなかった
-" set ambiwidth=double
+set ambiwidth=double
 
 " -----------------------------------------
 " キーマッピング

@@ -9,3 +9,5 @@ colorscheme hybrid
 GuiTabline 0
 GuiPopupmenu 0
 
+" guifontを設定するとambiwidthがautoに戻ってしまうらしいのでここで再度設定
+set ambiwidth=double
